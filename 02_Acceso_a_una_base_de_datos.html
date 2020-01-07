@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Php Aplicado en la Práctica</title>
+</head>
+<body>
+
+
+
+
+<!--
+	Curso de Php y MySql, Aplicado en la práctica
+
+		Curso diseño web principiantes 09 - crear clases y config en PHP
+
+			https://www.youtube.com/watch?v=zq8BAiesR3I
+
+-->
+
+
+<!--///////////////////////////////////////////////////////////////////////-->
+
+<!--
+
+1_Acceder a la base de datos sql, creada previamente a través de php:
+_____________________________________________________________________
+
+		
+	_de ésta manera, lo primero que haremos será crear un archivo llamado "config.in.php", dentro de la estructura de archivos 
+
+	"proyecto/apps/config.inc.php"
+
+
+	_ahora a través, de variables vamos ha definir los datos para conectarnos a la base de datos más adelante
+
+
+	_y para ésto, debemos ir al "phpmyadmin/usuarios/", así, podremos acceder a los usuarios con acceso al phpmyadmin, no a los usuarios
+
+	creados dentro de la base de datos que es diferente
+
+
+	_en éste ejemplo utilizaremos el usurio raíz, ó root, éste es el usuario que más derechos tiene sobre el sistema, así, podremos tomar
+
+	de éste usuario, el nombre, la dirección ip, ó nombre como en éste caso localhost, contraseña, y derechos ó que puede hacer dentro del
+
+	sistema y base de datos, y ésta es la información que debemos apuntar ó guardar en variables por que la necesitaremos más adelante
+
+-->
+
+<!--///////////////////////////////////////////////////////////////////////-->
+
+<!--
+	Guardar datos de conexión en variables en php
+
+-->
+
+	<?php
+
+		/*así, primeramente vamos ha crear una variable "$config", que al mismo tiempo será un array, ó vector esto quiere decir que éste 
+
+		array, guardará una serie de variables ó datos*/
+
+		$config['nombre_servidor'] = 'localhost';  //en éste caso estamos guardando el IP, ó host ó "loopback", ó localpc
+
+
+		$config['nombre_usuario'] = 'root';  //en éste caso estamos guardando el nombre de usuario del panel phpmyadmin
+
+
+		$config['password'] = '';  //en éste caso estamos guardando la contraseña, se deja vacío por el usuario root, no posee contraseña (evitar la Ñ)
+
+
+		$config['nombre_base_de_datos'] = 'blog';  //en éste caso nos estamos refiriendo al nombre que tiene la base de datos creada en phpmyadmin
+
+	?>
+
+
+
+
+</body>
+</html>
